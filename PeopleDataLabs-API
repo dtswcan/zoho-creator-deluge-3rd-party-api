@@ -1,0 +1,18 @@
+// reverse lookup by name and email on People Data Labs
+
+{
+	//string name, string email, int ProspectID
+	name = FetPar.get("firstName") + " " + FetPar.get("lastName");
+	email = FetPar.get("email");
+	str = "https://api.talentiq.co/v4/person?api_key=YOUR PEOPLE DATA LABS KEY&name=" + name + "&email=" + email;
+	respx = getUrl(str);
+	Status = respx.executeXPath("/root/status/text()");
+	messtr = respx.executeXPath("/root/error/message/text()");
+	error = resp.executeXPath("/root/error/type/text()");
+	info resp;
+	thisapp.Messaging.ResponceCodes(resp,status,"FC","PeopleDL_Enrich_06P",Search_ID);
+	if(Status == "200")
+	{
+   /// do something
+  
+  }
