@@ -1,5 +1,5 @@
   // my working example of a deluge postUrl to find an email on api.voilanorbert.com
-  
+  // https://www.voilanorbert.com/
   
   header = Map();
 	header.put("authorization","Basic "YOUR API CODE");
